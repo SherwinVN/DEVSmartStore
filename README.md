@@ -137,3 +137,5 @@ NOTE: Smartstore.NET 3 requires [Visual C++ Redistributable für Visual Studio 2
 ## License
 
 Smartstore.NET Community Edition is released under the [GPLv3 license](http://www.gnu.org/licenses/gpl-3.0.txt).
+## Copy
+Copyright of https://github.com/smartstore/SmartStoreNET. 
