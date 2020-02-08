@@ -1,0 +1,49 @@
+﻿@model IRuleExpression
+@using SmartStore.Rules
+
+@{
+    var templateSelector = ViewBag.TemplateSelector as IRuleTemplateSelector;
+    var templateInfo = templateSelector.GetTemplate(Model.Descriptor);
+    var isValid = Model.Descriptor.IsValid;
+}
+
+<div class="rule row xs-gutters" data-rule-id="@Model.Id">
+    <div class="col-2">
+        @{ Html.RenderPartial("_Rule.Descriptor", Model); }
+    </div>
+    <div class="col-2">
+        @{ Html.RenderPartial("_Rule.Operator", Model); }
+    </div>
+    <div class="col-8">
+        <div class="input-group">
+            @{ 
+                try
+                {
+                    Html.RenderPartial(templateInfo.TemplateName, Model);
+                }
+                catch (Exception ex)
+                {
+                    isValid = false;
+                    <div class="d-flex flex-grow-1 w-75">
+                        <div class="badge badge-danger text-truncate" title="@ex.Message">
+                            @T("Common.CannotDisplayView", templateInfo.TemplateName.NaIfEmpty())
+                            @(ex.Message.Truncate(300, "…"))
+                        </div>
+                    </div>
+                }
+
+                <div class="input-group-append">
+                    @if (isValid)
+                    {
+                        <button class="btn btn-light r-save-rule" type="button">
+                            <i class="fa fa-save"></i>
+                        </button>
+                    }
+                    <button class="btn btn-light btn-to-danger r-delete-rule" type="button">
+                        <i class="fa fa-trash-alt"></i>
+                    </button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

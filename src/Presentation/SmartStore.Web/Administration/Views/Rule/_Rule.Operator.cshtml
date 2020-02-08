@@ -1,0 +1,14 @@
+﻿@using SmartStore.Rules
+@model IRuleExpression
+
+<div id="rule-operator@(Model.Id)" class="btn-group d-block rule-operator" role="group" data-value="@Model.Operator">
+    <button type="button" class="btn btn-info btn-block dropdown-toggle d-flex align-items-center justify-content-between" data-toggle="dropdown">
+        @T(Model.Operator.ResourceKey)
+    </button>
+    <div class="dropdown-menu">
+        @foreach (var op in Model.Descriptor.Operators)
+        {
+            <a href="javascript:void(0)" class="dropdown-item" data-value="@op.Operator">@T(op.ResourceKey)</a>
+        }
+    </div>
+</div>
