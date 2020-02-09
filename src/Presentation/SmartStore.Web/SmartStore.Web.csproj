@@ -427,6 +427,11 @@
     <Compile Include="Models\ShoppingCart\ShoppingCartModel.cs" />
     <Compile Include="Models\Topics\TopicModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="404.html" />
@@ -463,6 +468,37 @@
     <Content Include="App_Data\EmailTemplates\de\System.Campaign.xml" />
     <Content Include="App_Data\EmailTemplates\de\System.ContactUs.xml" />
     <Content Include="App_Data\EmailTemplates\de\Wishlist.EmailAFriend.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Blog.BlogComment.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.BackInStock.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.EmailValidationMessage.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.NewOrderNote.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.NewPM.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.PasswordRecovery.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Customer.WelcomeMessage.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Forums.NewForumPost.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Forums.NewForumTopic.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\GiftCard.Notification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\NewCustomer.Notification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\NewReturnRequest.StoreOwnerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\News.NewsComment.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\NewsLetterSubscription.ActivationMessage.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\NewsLetterSubscription.DeactivationMessage.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\NewVATSubmitted.StoreOwnerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\OrderCancelled.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\OrderCompleted.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\OrderPlaced.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\OrderPlaced.StoreOwnerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Product.AskQuestion.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Product.ProductReview.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\QuantityBelow.StoreOwnerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\RecurringPaymentCancelled.StoreOwnerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\ReturnRequestStatusChanged.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Service.EmailAFriend.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\ShipmentDelivered.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\ShipmentSent.CustomerNotification.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\System.Campaign.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\System.ContactUs.xml" />
+    <Content Include="App_Data\EmailTemplates\vn\Wishlist.EmailAFriend.xml" />
     <Content Include="App_Data\EmailTemplates\en\Blog.BlogComment.xml" />
     <Content Include="App_Data\EmailTemplates\en\Customer.BackInStock.xml" />
     <Content Include="App_Data\EmailTemplates\en\Customer.EmailValidationMessage.xml" />
@@ -498,11 +534,18 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Localization\App\de\head.txt" />
+    <Content Include="App_Data\Localization\App\vi\all.smres.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Localization\App\vi\head.txt" />
     <Content Include="App_Data\Localization\App\en\all.smres.xml">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Localization\App\en\head.txt" />
     <Content Include="App_Data\Localization\Installation\installation.de.xml" />
+    <Content Include="App_Data\Localization\Installation\installation.vi.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Localization\Installation\installation.en.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -1934,6 +1977,12 @@
     <None Include="Config\log4net.Release.config">
       <DependentUpon>log4net.config</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

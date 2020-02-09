@@ -1,0 +1,94 @@
+﻿@using SmartStore.Rules
+@using SmartStore.Admin.Models.Rules
+@model IRuleExpression
+@{
+    var id = string.Concat("rule-value-", Model.Id);
+    var list = Model.Descriptor.SelectList;
+    var values = Model.RawValue.SplitSafe(",");
+    var remoteUrl = string.Empty;
+
+    if (list is RemoteRuleValueSelectList remoteList)
+    {
+        remoteUrl = Url.Action("RuleOptions", "Rule", new { ruleId = Model.Id, rootRuleSetId = (int)ViewBag.RootRuleSetId });
+    }
+}
+<select id="@id" name="@id" data-placeholder="@T("Common.Unspecified")" @Html.Attr("multiple", "multiple", list.Multiple)>
+    @if (remoteUrl.HasValue())
+    {
+        var selectedItems = Model.Metadata.TryGetValue("SelectedItems", out var objSelectedItems)
+            ? (Dictionary<string, RuleSelectItem>)objSelectedItems
+            : new Dictionary<string, RuleSelectItem>();
+
+        foreach (var value in values)
+        {
+            selectedItems.TryGetValue(value, out var selectedItem);
+            <option value="@value" selected="selected" 
+                    @Html.Attr("data-hint", selectedItem?.Hint, selectedItem?.Hint?.HasValue() ?? false)>
+            @(selectedItem?.Text.NullEmpty() ?? value)</option>
+        }
+    }
+    else
+    {
+        if (!values.Any() && !list.Multiple)
+        {
+            <option></option>
+        }
+        foreach (var grp in ((LocalRuleValueSelectList)list).Options.OrderBy(x => x.Group?.Order ?? 0).GroupBy(x => x.Group?.Name ?? ""))
+        {
+            if (grp.Key.HasValue())
+            {
+                @Html.Raw("<optgroup label=\"{0}\">".FormatInvariant(grp.Key))
+            }
+            foreach (var option in grp)
+            {
+                <option value="@option.Value" 
+                        @Html.Attr("selected", "selected", values.Contains(option.Value)) 
+                        @Html.Attr("data-hint", option.Hint, option.Hint.HasValue())>
+                @(option.Text.NullEmpty() ?? option.Value)</option>
+            }
+            if (grp.Key.HasValue())
+            {
+                @Html.Raw("</optgroup>")
+            }
+        }
+    }
+</select>
+
+<script>
+    $(function () {
+        var options = {
+            allowClear: true,
+            minimumResultsForSearch: 16,
+            maxTextLength: 200
+        };
+
+        @if (remoteUrl.HasValue())
+        {<text>
+            options.ajax = {
+                delay: 300,
+                cache: true,
+                dataType: 'json',
+                type: 'GET',
+                url: '@Html.Raw(remoteUrl)',
+                data: function (params) {
+                    var query = {
+                        search: params.term,
+                        page: params.page || 0
+                    }
+                    return query;
+                },
+                processResults: function (data, params) {
+                    params.page = params.page || 0;
+                    return {
+                        results: data.results,
+                        pagination: {
+                            more: data.hasMoreData
+                        }
+                    };
+                }
+            }
+        </text>}
+
+        $('#@id').selectWrapper(options);
+	});
+</script>

@@ -1,0 +1,174 @@
+﻿<Language Name="Việt Nam" IsDefault="true" IsRightToLeft="false" LanguageCulture="vi-Vi" FlagImageFileName="us.png">
+  <LocaleResource Name="AdminEmail">
+    <Value>Email</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdminPassword">
+    <Value>Mật khẩu</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfigureDirectoryPermissions">
+    <Value>Tài khoản '{0}' không được cấp quyền Sửa đổi trên thư mục '{1}'. Vui lòng cấu hình các quyền này.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfigureFilePermissions">
+    <Value>Tài khoản '{0}' không được cấp quyền Sửa đổi trên tệp '{1}'. Vui lòng cấu hình các quyền này.</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfirmPassword">
+    <Value>Nhập lại mật khẩu</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConnectionString">
+    <Value>Chuổi kết nối</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConnectionStringValues">
+    <Value>Nhập chuổi kết nối SQL</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConnectionStringWrongFormat">
+    <Value>Wrong SQL connection string format</Value>
+  </LocaleResource>
+  <LocaleResource Name="CreateDatabaseIfDoesNotExist">
+    <Value>Tạo mới cơ sở dữ liệu nếu không tồn tại.</Value>
+  </LocaleResource>
+  <LocaleResource Name="CreateSampleData">
+    <Value>Tạo dữ liệu mẫu</Value>
+  </LocaleResource>
+  <LocaleResource Name="CustomCollation">
+    <Value>Specify custom SQL Server collation</Value>
+  </LocaleResource>
+  <LocaleResource Name="DatabaseCreationError">
+    <Value>Đã xảy ra lỗi khi tạo cơ sở dữ liệu: {0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="DatabaseInformation">
+    <Value>Thông tin cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="DatabaseName">
+    <Value>Tên cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="DatabaseNotExists">
+    <Value>Cơ sở dữ liệu không tồn tại hoặc bạn không có quyền kết nối với cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="Example">
+    <Value>Ví dụ</Value>
+  </LocaleResource>
+  <LocaleResource Name="Install">
+    <Value>Cài đặt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Installing">
+    <Value>Cài đặt SmartStore</Value>
+  </LocaleResource>
+  <LocaleResource Name="PasswordsDoNotMatch">
+    <Value>Mật khẩu không trùng</Value>
+  </LocaleResource>
+  <LocaleResource Name="RawConnectionString">
+    <Value>Nhập chuỗi kết nối (Nâng cao)</Value>
+  </LocaleResource>
+  <LocaleResource Name="Recommended">
+    <Value>[khuyến nghị]</Value>
+  </LocaleResource>
+  <LocaleResource Name="RestartInstallation">
+    <Value>Khởi động lại cài đặt</Value>
+  </LocaleResource>
+  <LocaleResource Name="RestartInstallationTooltip">
+    <Value>Nhấn vào đây để khởi động lại quá trình cài đặt (xóa tất cả các giá trị được lưu trữ)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SetupFailed">
+    <Value>Cài đặt thất bại: {0}</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlAuthentication">
+    <Value>Sử dụng tài khoản SQL</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlCompact">
+    <Value>Sử dụng lưu trữ dữ liệu tích hợp (SQL Server Compact)</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlServerName">
+    <Value>Tên máy chủ SQL</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlServerPassword">
+    <Value>Mật khẩu SQL</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlServerUsername">
+    <Value>Tài khoản SQL</Value>
+  </LocaleResource>
+  <LocaleResource Name="SqlStandard">
+    <Value>Sử dụng cơ sở dữ liệu SQL Server (hoặc SQL Express)</Value>
+  </LocaleResource>
+  <LocaleResource Name="StoreInformation">
+    <Value>Thông tin cửa hàng</Value>
+  </LocaleResource>
+  <LocaleResource Name="Title">
+    <Value>Cài đặt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Tooltip1">
+    <Value>SmartStore.NET là giải pháp thương mại điện tử trực tuyến hàng đầu ASP.NET. Trình hướng dẫn này sẽ hướng dẫn bạn trong quá trình định cấu hình SmartStore.NET</Value>
+  </LocaleResource>
+  <LocaleResource Name="Tooltip2">
+    <Value>Để hoàn thành trình hướng dẫn này, bạn phải biết một số thông tin liên quan đến máy chủ cơ sở dữ liệu của bạn ("chuỗi kết nối"). Vui lòng liên hệ với ISP của bạn nếu cần thiết. Nếu bạn đang cài đặt trên máy hoặc máy chủ cục bộ, bạn có thể cần thông tin từ Quản trị viên hệ thống.</Value>
+  </LocaleResource>
+  <LocaleResource Name="WindowsAuthentication">
+    <Value>Sử dụng xác thực tích hợp của hệ điều hành</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="PrimaryLanguage">
+    <Value>Ngôn ngữ chính</Value>
+  </LocaleResource>
+  <LocaleResource Name="PrimaryLanguageRequired">
+    <Value>Ngôn ngữ chính là bắt buộc</Value>
+  </LocaleResource>
+  <LocaleResource Name="ConfirmInstall">
+    <Value>Bạn có muốn cài đặt SmartStore ngay bây giờ?</Value>
+  </LocaleResource>
+  <LocaleResource Name="AdminEmailValue">
+    <Value>levantrungeale28595@gmail.com</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="MediaStorage.Label">
+    <Value>Phương tiện lưu trữ</Value>
+  </LocaleResource>
+  <LocaleResource Name="MediaStorage.Hint">
+    <Value>Chọn tệp hệ thống nếu dung lượng đĩa của bạn không đủ (&lt; 500 MB). Còn lại, Bạn nên chọn cơ sở dữ liệu.</Value>
+  </LocaleResource>
+  <LocaleResource Name="MediaStorage.DB">
+    <Value>Cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="MediaStorage.FS">
+    <Value>Tập tin hệ thống</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Common.Notification">
+    <Value>Thông báo</Value>
+  </LocaleResource>
+  <LocaleResource Name="Common.StartShop">
+    <Value>Thành công! cửa hàng cài đặt thành công ;-) Cửa hàng của bạn đang được chạy...</Value>
+  </LocaleResource>
+  
+  <LocaleResource Name="Progress.CheckingRequirements">
+    <Value>Kiểm tra yêu cầu</Value>
+  </LocaleResource>
+  <LocaleResource Name="Progress.BuildingDatabase">
+    <Value>Tạo cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="Progress.InstallingPlugins">
+    <Value>Cài đặt tiện ích {0} of {1}</Value>
+  </LocaleResource>
+  <LocaleResource Name="Progress.Finalizing">
+    <Value>Hoàn thiện cài đặt</Value>
+  </LocaleResource>
+  <LocaleResource Name="Progress.CreatingRequiredData">
+    <Value>Tạo dữ liệu cần thiết</Value>
+  </LocaleResource>
+  <LocaleResource Name="Progress.CreatingSampleData">
+    <Value>Tạo dữ liệu mẫu</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="InstallOptions">
+    <Value>Tùy chọn</Value>
+  </LocaleResource>
+
+  <LocaleResource Name="Database">
+	<Value>Cơ sở dữ liệu</Value>
+  </LocaleResource>
+  <LocaleResource Name="Connection">
+	<Value>Kết nối</Value>
+  </LocaleResource>
+  <LocaleResource Name="Authentication">
+	<Value>Xác thực</Value>
+  </LocaleResource>
+
+</Language>
